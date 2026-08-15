@@ -1,0 +1,45 @@
+{
+  "agents": {
+    "list": [
+      {
+        "id": "post-site",
+        "workspace": "/ABSOLUTE/PATH/TO/workspace-post-site"
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "agentId": "post-site",
+      "match": {
+        "channel": "telegram",
+        "accountId": "default",
+        "peer": {
+          "kind": "group",
+          "id": "-1001234567890"
+        }
+      }
+    }
+  ],
+  "plugins": {
+    "allow": ["post-site-closure-inbound"],
+    "entries": {
+      "post-site-closure-inbound": {
+        "enabled": true,
+        "config": {
+          "groupId": "-1001234567890",
+          "allowedSenderIds": ["123456789"],
+          "stateChangeSenderIds": ["123456789"],
+          "botUsername": "FieldOpsBot",
+          "pythonBin": "/ABSOLUTE/PATH/TO/post-site-closure/.venv/bin/python",
+          "projectDir": "/ABSOLUTE/PATH/TO/post-site-closure",
+          "dbPath": "/ABSOLUTE/PATH/TO/post-site-closure/data/postsite.db",
+          "openclawBin": "/ABSOLUTE/PATH/TO/openclaw",
+          "agentId": "post-site",
+          "accountId": "default",
+          "timezone": "Asia/Singapore",
+          "workflowTimeoutMs": 30000
+        }
+      }
+    }
+  }
+}

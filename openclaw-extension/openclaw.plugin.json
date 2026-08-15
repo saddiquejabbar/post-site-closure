@@ -1,0 +1,55 @@
+{
+  "id": "post-site-closure-inbound",
+  "name": "post-site closure inbound",
+  "description": "Deterministic Telegram review, approval, and scheduling bridge for post-site closure.",
+  "version": "0.1.0",
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "groupId": { "type": "string", "minLength": 1 },
+      "allowedSenderIds": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": { "type": "string", "minLength": 1 }
+      },
+      "stateChangeSenderIds": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": { "type": "string", "minLength": 1 }
+      },
+      "botUsername": { "type": "string", "minLength": 1 },
+      "pythonBin": { "type": "string", "minLength": 1 },
+      "projectDir": { "type": "string", "minLength": 1 },
+      "dbPath": { "type": "string", "minLength": 1 },
+      "openclawBin": { "type": "string", "minLength": 1 },
+      "agentId": { "type": "string", "minLength": 1, "default": "post-site" },
+      "accountId": { "type": "string", "minLength": 1, "default": "default" },
+      "timezone": { "type": "string", "minLength": 1, "default": "Asia/Singapore" },
+      "workflowTimeoutMs": {
+        "type": "integer",
+        "minimum": 1000,
+        "maximum": 120000,
+        "default": 30000
+      }
+    }
+  },
+  "uiHints": {
+    "groupId": { "label": "Allowed Telegram group" },
+    "allowedSenderIds": { "label": "Allowed DMR senders" },
+    "stateChangeSenderIds": { "label": "Approval senders" },
+    "botUsername": { "label": "Telegram bot username" },
+    "pythonBin": { "label": "Post-site Python", "advanced": true },
+    "projectDir": { "label": "Post-site project", "advanced": true },
+    "dbPath": { "label": "Post-site state database", "advanced": true },
+    "openclawBin": { "label": "OpenClaw executable", "advanced": true },
+    "agentId": { "label": "Owning agent", "advanced": true },
+    "accountId": { "label": "Telegram account", "advanced": true },
+    "timezone": { "label": "Schedule timezone", "advanced": true }
+  }
+}
