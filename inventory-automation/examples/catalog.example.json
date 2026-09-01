@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "sku": "SW-75-W-ZB",
+      "name": "Atlas 75 White Zigbee Switch",
+      "aliases": ["atlas 75 white", "atlas75 white", "75 white switch", "atlas 75"],
+      "active": true
+    },
+    {
+      "sku": "SW-75-B-ZB",
+      "name": "Atlas 75 Black Zigbee Switch",
+      "aliases": ["atlas 75 black", "atlas75 black", "75 black switch", "atlas 75"],
+      "active": true
+    },
+    {
+      "sku": "HUB-ZB-01",
+      "name": "Zigbee Hub",
+      "aliases": ["zigbee hub", "zigbee gateway", "gateway"],
+      "active": true
+    },
+    {
+      "sku": "CURTAIN-MOTOR-01",
+      "name": "Smart Curtain Motor",
+      "aliases": ["curtain motor", "smart curtain motor"],
+      "active": true
+    }
+  ]
+}
