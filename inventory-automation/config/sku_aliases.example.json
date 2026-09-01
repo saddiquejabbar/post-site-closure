@@ -1,0 +1,5 @@
+{
+  "1 gang relay": "SKU-SWITCH-1G",
+  "zigbee hub": "SKU-HUB-ZB",
+  "controller": ["SKU-HUB-ZB", "SKU-IR-RF"]
+}

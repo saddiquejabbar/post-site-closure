@@ -1,0 +1,10 @@
+[project]
+name = "legacy-excel-inventory-automation"
+version = "0.1.0"
+description = "Controlled Telegram-to-XLSM inventory checkout workflow"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["."]
